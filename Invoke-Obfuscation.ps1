@@ -1353,8 +1353,10 @@ http://www.danielbohannon.com
                             Write-Host $CmdToPrint[1] -ForegroundColor Cyan
 
                             # Output obfuscation result.
+			    
                             Write-Host "`nResult:`t"
                             Out-ScriptContents $Script:ObfuscatedCommand -PrintWarning
+			    $Script:ObfuscatedCommand | Out-File "D:\Lab\AVEvasion\Invoke-Obfuscation-master\result\ObfuscatedOutput.ps1" -Encoding ASCII
                         }
                     }
                 }
